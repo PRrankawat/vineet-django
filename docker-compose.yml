@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  vineet-django:
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - AWS_ACCESS_KEY_ID="aass"
+        - AWS_SECRET_ACCESS_KEY="jfhbg"
+        - AWS_DEFAULT_REGION="sjhohasuohas"
+    container_name: vineet-django
+    ports:
+      - 5000:5000
+    # bridge - connect to docker container from localhost
+    network_mode: bridge
